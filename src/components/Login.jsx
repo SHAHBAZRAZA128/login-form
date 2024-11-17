@@ -29,8 +29,6 @@ const Login = () => {
         const response = await sendRequest("api/v1/auth/login", "POST", {
           email: values.email,
           password: values.password,
-          deviceId: "random-device-id",
-          deviceType: "web",
         });
 
         const { accessToken } = response.data.token;
